@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --col-count-5: 5;
+    font-size: 20px;
+}
+body{
+    margin: 1rem;
+    background-color: rgb(50, 2, 2);
+    font-size: 1.5rem;
+}
+.container{
+    display: grid;
+    min-height: 100vh;
+    min-height: 100dvh;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: auto auto auto auto 1fr auto auto auto;
+    gap: 0.5rem;
+
+    grid-template-areas: 
+    "lgl lgr"
+    "header header"
+    "left left"
+    "right right"
+    "nav nav"
+    "main im1"
+    "im2 im2"
+    "add add"
+    "footer footer";
+}
+.item{
+    padding:1rem;
+}
+.left{
+    grid-area: left;
+}
+.right{
+    grid-area: right;
+}
+.ul-margin, .ol-margin{
+    margin: 1rem 0 1rem 1rem;
+}
+.right ul li, .left ul li, main ul li{
+    margin-bottom: 0.25rem;
+}
+header{
+    grid-area: header;
+    background-color: rgb(72, 39, 39);
+    color: tan;
+    font-size: 1.8rem;
+    border: 1px solid rgb(72, 39, 39);
+    border-radius: 10px;
+}
+.nav{
+    grid-area: nav;
+}
+.main-content{
+    grid-area: main;
+    background-color: tan;
+    margin-bottom: 8px;
+}
+footer{
+    display: flex;
+    grid-area: footer;
+    background-color:rgb(99, 49, 49);
+    justify-content: center;
+
+}
+.nav a{
+    background-color: rgb(173, 106, 62);
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    color: rgb(212, 209, 209);
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.5rem;
+}
+.nav a:hover{
+    background-color: rgb(204, 103, 35);
+    color: black;
+}
+.im1{
+    grid-area: im1;
+}
+.lgr{
+    grid-area: lgr;
+    padding-left: 63%;
+}
+.lgl{
+    grid-area: lgl;
+}
+
+.im2{
+    grid-area: im2;
+    justify-self: center;
+}
+.add{
+    grid-area: add;
+    background-color: tan;
+    text-align: center;
+}
+@media (width>750px){
+    .container{
+        grid-template-columns: repeat(var(--col-count-5), 1fr);
+        grid-template-rows: auto auto 1fr 1fr auto;
+        grid-template-areas:
+        "lgl header header header lgr"
+        "nav nav nav nav nav"
+        "left main main im1 right"
+        "left main main im1 right"
+        "left im2 im2 im2 right"
+        "left add add add right"
+        "footer footer footer footer footer" ;
+    }
+
+    .nav ul{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.5rem;
+        list-style: none;
+    }
+    .nav a{
+        padding: 0.75rem;
+    }
+    .nav a:hover{
+        background-color: orangered;
+        color: #333;
+    }
+}

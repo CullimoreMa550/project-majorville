@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 1rem;
+    background-color: rgb(50, 2, 2);
+    font-size: 1.5rem;
+}
+p{
+    color: tan;
+}
+h2{
+    color: bisque;
+    font-size: 3rem;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    grid-template-areas:
+    "lgl header header lgr"
+    "nav nav nav nav"
+    ". im1 im2 ."
+    ". text1 text2 ."
+    "footer footer footer footer" ;
+}
+.nav ul{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+    list-style: none;
+}
+.nav a{
+    background-color: rgb(173, 106, 62);
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    color: rgb(212, 209, 209);
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 1rem;
+}
+.nav a:hover{
+    background-color: rgb(204, 103, 35);
+    color: black;
+}
+nav{
+    grid-area: nav;
+    
+}
+footer{
+    display: flex;
+    grid-area: footer;
+    background-color:rgb(99, 49, 49);
+    justify-content: center;
+    
+}
+main{
+    grid-area: text1;
+}
+aside{
+    grid-area: text2;
+}
+.add{
+    grid-area: text3;
+}
+header{
+    grid-area: header;
+}
+.lgl{
+    grid-area: lgl;
+}
+.lgr{
+    grid-area: lgr;
+}
+.im1{
+    grid-area: im1;
+}
+.im2{
+    grid-area: im2;
+}

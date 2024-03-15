@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 1rem;
+    background-color: rgb(50, 2, 2);
+    font-size: 1.5rem;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto repeat(auto-fill, minmax(400px, 1fr)) auto;
+    gap: 10px;
+    grid-template-areas:
+    "lgl header header lgr"
+    "nav nav nav nav"
+    "left blendpic blendtext right"
+    "left pigtext pigpic right"
+    "left goodpic goodtext right"
+    "left pizzatext pizzapic right"
+    "footer footer footer footer" ;
+}
+.card{
+    background-color: rgb(94, 41, 41);
+}
+p{
+    color: bisque;
+}
+a{
+    color: bisque;
+    text-decoration: none;
+}
+a:hover{
+    color: tan;
+}
+.footlogo{
+    grid-area: footlogo;
+    margin-left: 25%;
+}
+.lgr{
+    grid-area: lgr;
+    margin-left: 73%;
+}
+.lgl{
+    grid-area: lgl;
+}
+nav{
+    grid-area: nav;
+}
+.nav ul{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+    list-style: none;
+}
+.nav a{
+    background-color: rgb(173, 106, 62);
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    color: rgb(212, 209, 209);
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 1.75rem;
+}
+
+.blendtext{
+    grid-area: blendtext;
+    text-align: center;
+}
+.pigtext{
+    grid-area: pigtext;
+    text-align: center;
+}
+.pizzatext{
+    grid-area: pizzatext;
+    text-align: center;
+}
+.goodtext{
+    grid-area: goodtext;
+    text-align: center;
+}
+.blendpic{
+    grid-area: blendpic;
+    padding: 18%;
+}
+.pigpic{
+    grid-area: pigpic;
+    padding: 16%;
+    padding-bottom: 20%;
+}
+.pizzapic{
+    grid-area: pizzapic;
+    padding: 16%;
+    padding-right: 20%;
+}
+.goodpic{
+    grid-area: goodpic;
+    padding: 16%;
+}
+footer{
+    grid-area: footer;
+    text-align: left;
+    text-transform: uppercase;
+    background-color: rgb(94, 41, 41);
+    padding-top: 2%;
+    padding-bottom: 2%;
+    color: tan;
+    font-size: 2rem;
+    border-radius: 10px;
+    display: flex;
+    grid-area: footer;
+    background-color:rgb(99, 49, 49);
+    justify-content: center; 
+
+}
+
+
+header{
+    grid-area: header;
+    background-color: rgb(94, 41, 41);
+    color: tan;
+    border-radius: 10px;
+    text-align: center;
+    padding-top:3%;
+
+}
+
