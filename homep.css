@@ -49,11 +49,11 @@ body{
 }
 header{
     grid-area: header;
-    background-color: rgb(72, 39, 39);
+    background-color: rgb(94, 41, 41);
     color: tan;
-    font-size: 1.8rem;
-    border: 1px solid rgb(72, 39, 39);
     border-radius: 10px;
+    text-align: center;
+    padding-top:3%;
 }
 .nav{
     grid-area: nav;
@@ -66,7 +66,7 @@ header{
 footer{
     display: flex;
     grid-area: footer;
-    background-color:rgb(99, 49, 49);
+    background-color:rgb(94, 41, 41);
     justify-content: center;
 
 }

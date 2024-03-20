@@ -70,12 +70,18 @@ aside{
 }
 header{
     grid-area: header;
+    background-color: rgb(94, 41, 41);
+    color: tan;
+    border-radius: 10px;
+    text-align: center;
+    padding-top:3%;
 }
 .lgl{
     grid-area: lgl;
 }
 .lgr{
     grid-area: lgr;
+    justify-self: right;
 }
 .im1{
     grid-area: im1;
